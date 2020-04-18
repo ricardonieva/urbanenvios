@@ -1,19 +1,38 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Ventana de prueba</title>
+    <title>Urban Envios</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="icon" type="image/ico" href="images/UE_icono.ico"/>
+
     <!-- Bootstrap CSS -->
+    <link href="bootstrap/sticky-footer-navbar.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
 
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><p class="navbar-brand"> UrbanEnvios</p></li>
+          </ul> 
+
+          <a class="btn btn-primary" href="../controller/cerrarSesionController.php">Cerrar Sesion</a> 
+      </div>
+    </nav>
     @yield('contenido')        
   
-    
+    <footer class="footer article">
+      <div class="container"> 
+        <span class="text-muted">
+          <p>Final Programacion Web</p>
+        </span> 
+      </div>
+    </footer>   
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
