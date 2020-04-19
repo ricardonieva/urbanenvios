@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
+<<<<<<< HEAD
 Route::get('login', function (){
     return view('login');
 })->name('login');
@@ -24,6 +25,9 @@ Route::get('menuPrincipal', function () {
 })->name('menuPrincipal')->middleware('autenticacion');
 
 Route::post('login', 'login@loginCliente')->name('loginCliente');
+=======
+Route::get('menu','menu@mostrarMenu');
+>>>>>>> parent of ad7f607... alta de licente completa
 
 Route::get('nuevocliente', function () {
     return view('ClienteAlta');

@@ -13,8 +13,7 @@ class menu extends Controller
         // $cliente = new cliente();
         // $datos = $cliente->selectAllCliente(); 
 
-        // $datos = App\cliente::all();
-        // return view('menu', ["clientes" => $datos]);
-        return view('login');
+        $datos = App\cliente::all();
+        return view('menu', ["clientes" => $datos]);
     }
 }

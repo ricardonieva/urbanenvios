@@ -18,7 +18,7 @@ class CreateClientesTable extends Migration
             $table->string('nombre');
             $table->string('apellido');
             $table->string('telefono');
-            $table->string('mail')->unique();
+            $table->string('mail');
             $table->string('contrasenia');
         });
     }
