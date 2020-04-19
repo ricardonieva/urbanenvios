@@ -17,7 +17,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('login', function (){
     return view('login');
-});
+})->name('login');
+
+Route::get('menuPrincipal', function () {
+    return view('menu');
+})->name('menuPrincipal')->middleware('autenticacion');
+
+Route::post('login', 'login@loginCliente')->name('loginCliente');
 
 Route::get('nuevocliente', function () {
     return view('ClienteAlta');

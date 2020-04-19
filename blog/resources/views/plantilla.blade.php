@@ -18,7 +18,13 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"><p class="navbar-brand"> UrbanEnvios</p></li>
+            <li class="nav-item active">
+              <p class="navbar-brand"> UrbanEnvios |  
+                @if ( session('usuario') )
+                  {{ session('usuario') }}
+                @endif    
+              </p>
+            </li>
           </ul> 
 
           <a class="btn btn-primary" href="../controller/cerrarSesionController.php">Cerrar Sesion</a> 

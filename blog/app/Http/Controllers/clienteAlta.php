@@ -22,8 +22,8 @@ class clienteAlta extends Controller
         $cliente->apellido = $request->apellido;
         $cliente->telefono = $request->telefono;
         $cliente->mail = $request->mail;
-        $cliente->contrasenia = password_hash($request->contrasenia, PASSWORD_DEFAULT);
-      
+        $cliente->contrasenia = password_hash($request->contrasenia, PASSWORD_DEFAULT);        
+        $cliente->save();   
         return back()->with('mensaje', 'Usario Registrado');  
     }
 }
