@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class cliente extends Model
 {
-    protected $table = 'clientes';
-    public $timestamps = false;    
+    //
+    const UPDATED_AT = null;
+    const CREATED_AT = null;
 }

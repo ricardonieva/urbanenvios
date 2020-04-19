@@ -15,8 +15,13 @@ class clienteAlta extends Controller
         $cliente->telefono = $request->telefono;
         $cliente->mail = $request->mail;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $cliente->contrasenia = password_hash($request->contrasenia, PASSWORD_DEFAULT);        
         $cliente->save();   
+=======
+        $cliente->contrasenia = password_hash($request->contrasenia, PASSWORD_DEFAULT);
+      
+>>>>>>> parent of d48db8e... hola pame :P
         return back()->with('mensaje', 'Usario Registrado');  
 =======
         $cliente->contrasenia = "1234";

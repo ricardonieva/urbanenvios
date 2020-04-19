@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 <<<<<<< HEAD
 Route::get('login', function (){
     return view('login');
+<<<<<<< HEAD
 })->name('login');
 
 Route::get('menuPrincipal', function () {
@@ -28,6 +29,9 @@ Route::post('login', 'login@loginCliente')->name('loginCliente');
 =======
 Route::get('menu','menu@mostrarMenu');
 >>>>>>> parent of ad7f607... alta de licente completa
+=======
+});
+>>>>>>> parent of d48db8e... hola pame :P
 
 Route::get('nuevocliente', function () {
     return view('ClienteAlta');
