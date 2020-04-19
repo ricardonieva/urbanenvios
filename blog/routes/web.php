@@ -34,5 +34,3 @@ Route::get('nuevocliente', function () {
 });
 
 Route::post('nuevocliente', 'clienteAlta@altaDecliente')->name('altaDeCliente'); 
-
-Route::get('pedido', '');
