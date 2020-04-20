@@ -52,7 +52,7 @@
     
 <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
     <div class="container">
-        <img src="images/logo UE.png" class="rounded" width="80">
+        <img src="images/logo.png" class="rounded" width="80">
         {{-- <a class="navbar-brand" href="#">UrbanEnvios</a> --}}
        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -73,18 +73,19 @@
                 <div class="card">
                 <div class="card-header">Ingrese sus datos por favor</a></div>
                     <div class="card-body">
-                        <form action="" method="">
+                        <form action="{{ route('loginCliente')}}" method="POST">
+                            @csrf
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                    <input type="text" class="form-control" name="mail" required autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">Contraseña</label>
                                 <div class="col-md-6">
-                                    <input type="password" id="password" class="form-control" name="password" required>
+                                    <input type="password" class="form-control" name="contrasenia" required>
                                 </div>
                             </div>                           
 
@@ -95,6 +96,10 @@
                             </div>
                         </form>
                     </div>
+
+                    @if ( session('mensaje') )
+                        <div class="alert alert-info">{{ session('mensaje') }}</div>
+                    @endif
                         
                 </div>
             </div>

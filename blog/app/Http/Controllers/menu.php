@@ -10,10 +10,6 @@ class menu extends Controller
 {
     public function mostrarMenu()
     {
-        // $cliente = new cliente();
-        // $datos = $cliente->selectAllCliente(); 
-
-        $datos = App\cliente::all();
-        return view('menu', ["clientes" => $datos]);
+    
     }
 }

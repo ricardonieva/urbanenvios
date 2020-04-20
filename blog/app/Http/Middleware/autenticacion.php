@@ -15,6 +15,14 @@ class autenticacion
      */
     public function handle($request, Closure $next)
     {
+        if($request->session()->has('idusuario') == true)
+        {
+            
+        }
+        else
+        {
+            return redirect('login');
+        }       
         return $next($request);
     }
 }
