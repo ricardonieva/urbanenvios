@@ -30,7 +30,7 @@ class CreatePedidosTable extends Migration
             $table->float('montoDePago');
             $table->unsignedBigInteger('clientes_idclientes');
             $table->foreign('clientes_idclientes')->references('idclientes')->on('clientes');
-            $table->unsignedBigInteger('cadetes_idcadetes');
+            $table->unsignedBigInteger('cadetes_idcadetes')->nullable();
             $table->foreign('cadetes_idcadetes')->references('idcadetes')->on('cadetes');
         });
     }

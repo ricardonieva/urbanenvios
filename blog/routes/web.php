@@ -19,6 +19,12 @@ Route::get('nuevocliente', function () {
 
 Route::post('nuevocliente', 'clienteAlta@altaDecliente')->name('altaDeCliente'); 
 
-Route::get('pedidos', function(){
-    return view('realizarPedido');
-})->name('pedidos');
+Route::get('pedidos', 'pedidos@realizarPedidos')->name('pedidos');
+
+Route::post('pedidos', 'pedidos@finalizarPedido')->name('finalizarPedido');
+
+Route::get('altaCadete', function() {
+    return view('cadeteAlta');
+})->name('altaCadete');
+
+Route::post('altaCadete', 'cadeteAlta@altaDeCadete')->name('altaDeCadete');
